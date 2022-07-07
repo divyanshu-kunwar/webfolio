@@ -1,0 +1,130 @@
+.bodyStyle{
+    background-color: var(--card-1-color);
+    background-image: url('../../image/back.png');
+    height: 100vh;
+}
+
+.navBarStyle{
+    position: fixed;
+    width: calc(100% - 100px);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color : var(--text-color-1);
+}
+
+.navLinksParent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLinks , .navLinks2{
+    color: var(--text-color-1);
+    padding: 0px 30px;
+    cursor: pointer;
+}
+
+.navLinks:hover{
+    color: var(--text-color);
+    font-size: large;
+    transition: 0.3s ease-in-out;
+}
+
+.navLinks2:hover{
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+.registerStyle{
+    padding: 6px 20px;
+    margin-left: 30px;
+    border: 1px solid var(--text-color-1);
+    border-radius : 4px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.registerStyle:hover{
+    border : 1px solid var(--background-color);
+    background: var(--primary-gradient);
+}
+
+.loginStyle{
+    padding: 5px 0px;
+    margin-left: 30px;
+    border-radius : 4px;
+    color: var(--text-color-1);
+    cursor: pointer;
+}
+
+.loginStyle:hover{
+    color: var(--text-color);
+}
+
+.footerStyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--background-color);
+    position: fixed;
+    width: 100%;
+    padding: 8px 4px;
+    bottom: 0px;
+    font-size: small;
+}
+
+.mainContentStyle{
+    padding: 54px 20px 38px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 92px);
+    
+}
+
+.bottomLoader{
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    display: flex;
+    bottom: 38px;
+    flex-direction: column;
+}
+.EmptyLoader{
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    opacity: 0.1;
+}
+.filledLoader{
+    height: 3px;
+    margin-top:-4px;
+    background-color: var(--primary-color);
+}
+.swapButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+}
+.LeftSwap{
+    transform: scaleX(-1);
+}
+.swapButtons img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    opacity: 0.5;
+    filter: grayscale(80%);
+}
+
+.swapButtons img:hover{
+    opacity: 1;
+    filter: grayscale(0%);
+}
