@@ -5,7 +5,7 @@
 
  export default function FeaturePage2(){
      return <div className={style.FeaturePage}>
-        Features 102
+        My Skills
      </div>
  }
   

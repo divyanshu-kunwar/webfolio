@@ -3,9 +3,9 @@
  */
  import style from './feature.module.css'
 
- export default function FeaturePage3(){
+ export default function FeaturePage4(){
      return <div className={style.FeaturePage}>
-        Work
+        Contact
      </div>
  }
   

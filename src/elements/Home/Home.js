@@ -1,22 +1,28 @@
 /**
  * path = "/" or "/home"
  */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {Outlet , useNavigate } from 'react-router-dom'
 
 import styles from './home.module.css'
 import swapButton from '../../image/rightSwap.svg'
 
 import logo from '../../image/logo2.png'
-import pagesData from '../../Data/pages.json'
+
+
+import pagesData from '../../Data/pages'
 
 export default function Home(){
 
-    const [tabNo , setTabNo] = useState(1);
+    const [tabNo , ] = useState(1);
     const [currentPage , setCurrentPage] = useState(1);
     const [max , setMax] = useState(3);
     let navigate = useNavigate()
     
+    useEffect(() => {
+        console.log(Object.keys(pagesData.tabs).length-1)
+        setMax(Object.keys(pagesData.tabs).length-1)
+    } , [])
 
     return <div className={styles.bodyStyle}>
 
@@ -32,6 +38,7 @@ export default function Home(){
                 </span>
             }
             )}
+
 
         </div>
         <div>
@@ -80,9 +87,15 @@ export default function Home(){
     {/*---------------------------------------- footer --------------------------------*/}
     <div className={styles.footerStyle}>
         <div>
-            <span className={styles.navLinks2} >Contact</span>
+            {Object.keys(pagesData.social).map((key) => {
+                return <a key={key} href={pagesData.social[key].link}>
+                    <img className={styles.social_icon} src={pagesData.social[key].icon} alt={pagesData.social[key].title}/>
+                </a>
+            })
+            }
+            {/* <span className={styles.navLinks2} >Contact</span>
             <span className={styles.navLinks2} >Privacy Policy</span>
-            <span className={styles.navLinks2} >About Us</span>
+            <span className={styles.navLinks2} >About Us</span> */}
         </div>
         <span>No Copyright@</span>
         <span>Handicrafted With 😍 in India</span>
