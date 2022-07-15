@@ -7,8 +7,6 @@ import {Outlet , useNavigate } from 'react-router-dom'
 import styles from './home.module.css'
 import swapButton from '../../image/rightSwap.svg'
 
-import logo from '../../image/logo2.png'
-
 
 import pagesData from '../../Data/pages'
 
@@ -28,7 +26,9 @@ export default function Home(){
 
     {/*---------------------------------------- Navigation Bar --------------------------------*/}
     <div className={styles.navBarStyle}>
-        <div><img src={logo} width="68px" alt="thryve logo"/></div>
+        <div><span style={{color:'var(--primary-color)',fontFamily:'cursive' , fontWeight:'bold'}}>
+            {pagesData.name}
+        </span></div>
         <div className={styles.navLinksParent}>
 
             {Object.keys(pagesData.tabs).map((key) => {

@@ -3,6 +3,7 @@ import github_icon from '../image/social/github.svg'
 import youtube_icon from '../image/social/youtube.svg'
 
 const pagesData = {
+  "name":"Divyanshu",
   "tabs": {
     "1": {
       "title": "About"
