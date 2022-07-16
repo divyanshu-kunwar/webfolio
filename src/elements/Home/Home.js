@@ -89,16 +89,19 @@ export default function Home(){
         <div>
             {Object.keys(pagesData.social).map((key) => {
                 return <a key={key} href={pagesData.social[key].link}>
-                    <img className={styles.social_icon} src={pagesData.social[key].icon} alt={pagesData.social[key].title}/>
+                    <img className={styles.social_icon} src={pagesData.social[key].icon} alt={pagesData.social[key].title} 
+                        onClick={
+                            ()=>{
+                                window.open(pagesData.social[key].url)
+                            }
+                        }
+                    />
                 </a>
             })
             }
-            {/* <span className={styles.navLinks2} >Contact</span>
-            <span className={styles.navLinks2} >Privacy Policy</span>
-            <span className={styles.navLinks2} >About Us</span> */}
         </div>
         <span>No Copyright@</span>
-        <span>Handicrafted With 😍 in India</span>
+        <span>{pagesData.credit}</span>
     </div>
 
 </div>

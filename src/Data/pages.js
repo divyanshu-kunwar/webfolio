@@ -24,20 +24,19 @@ const pagesData = {
   },
   "social": {
     "1": {
-      "url": "https://www.linkedin.com/in/joshua-w-b-a8a8b8b4/",
+      "url": "https://www.linkedin.com/in/divyanshu-kunwar-6b11131b3/",
       "icon": linkedin_icon
     },
     "2": {
-      "url": "https://www.youtu.be/",
+      "url": "https://www.youtube.com/c/HomoFabers",
       "icon": youtube_icon
     },
     "3": {
-      "url": "https://www.github.com",
+      "url": "https://github.com/KUNWAR-DIVYANSHU",
       "icon": github_icon
     }
   },
-  "address": "abcd road abcd sahar",
-  "credit": "goes to divyanshu"
+  "credit": "Handicrafted With 😍 in India"
 }
 
 export default pagesData;
