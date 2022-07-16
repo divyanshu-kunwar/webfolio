@@ -33,7 +33,7 @@ export default function FeaturePage1() {
 
             <center>
               I'm a <big>Data Scientist</big> and a{" "}
-              <big>Full Stack Web Developer</big>.
+              <big>Software Developer</big>.
             </center>
             <br />
             My job consists in helping companies and researchers to{" "}

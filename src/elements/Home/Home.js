@@ -12,7 +12,7 @@ import pagesData from '../../Data/pages'
 
 export default function Home(){
 
-    const [tabNo , ] = useState(1);
+    const [tabNo , setTabNo] = useState(1);
     const [currentPage , setCurrentPage] = useState(1);
     const [max , setMax] = useState(3);
     let navigate = useNavigate()
@@ -33,7 +33,18 @@ export default function Home(){
 
             {Object.keys(pagesData.tabs).map((key) => {
                 return <span key={key} className={styles.navLinks} 
-                style={tabNo == key? {color:'var(--primary-color)'} : {color:'var(--text-color-1)'}} >
+                style={tabNo == key? {color:'var(--primary-color)'} : {color:'var(--text-color-1)'}} 
+                onClick = {() => {
+                    if(key > 4){
+                        window.alert("This page is not yet available")
+                    }else{
+                        setCurrentPage(key)
+                        setTabNo(key)
+                        navigate(`/home/feature${key}`)
+
+                    }
+                }
+                }>
                     {pagesData.tabs[key].title}
                 </span>
             }
