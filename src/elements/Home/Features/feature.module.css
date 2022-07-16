@@ -20,16 +20,122 @@
     animation: fade 1s ease-in-out;
 }
 .AboutPage h1{
+    display: flex;
     font-size: 2.5em;
     color: var(--text-color-1);
-    align-self: center;
-    width: 50%;
+    align-self: left;
+    margin-left: 360px;
+    max-width: 700px;
 }
 .AboutPage p{
     font-size: 14px;
     color: var(--text-color-1);
     align-self: center;
     width: 50%;
+}
+
+.waivyText{
+    display: flex;
+    width: fit-content;
+    padding: 0px 8px;
+    margin: 0px 15px;
+    background: linear-gradient(to left, #00000000 50%, var(--primary-color) 50%) right;
+    background-size: 250%;
+    transition: .5s ease-out;
+}
+
+.waivyText:hover{
+    transition: 1s linear;
+    background-position: left;
+} 
+
+.handRotate{
+    animation: bounce 0.7s infinite ease-in-out;
+}
+
+.myselftext{
+    animation: bounce 0.6s 1 ease-in-out;
+}
+
+.hitext{
+    animation: bounce 0.6s infinite ease-in-out;
+}
+
+.myselftext:hover{
+    animation: bounce 0.6s infinite ease-in-out;
+}
+
+.gridParent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px 50px;
+    width: 70%;
+    height: 45vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 300px;
+    padding: 40px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.gridParent::-webkit-scrollbar{
+    width: 6px;
+
+}
+
+.gridParent::-webkit-scrollbar-thumb{
+    background-color: var(--text-color-1);
+    border-radius: 4px;
+}
+
+.gridParent::-webkit-scrollbar-thumb:hover{
+    background-color: var(--primary-color);
+}
+
+
+.gridParent p{
+    width: 100%;
+    font-size: large;
+}
+
+.gridParent big{
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.descriptionLabels{
+    color: var(--primary-color);
+    font-size: larger;
+}
+
+@keyframes bounce {
+
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+    
+}
+
+@keyframes hRotate{
+    0%{
+        transform: rotate(-20deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 

@@ -4,6 +4,7 @@ import youtube_icon from '../image/social/youtube.svg'
 
 const pagesData = {
   "name":"Divyanshu",
+  "fullName":"Divyanshu Kunwar",
   "tabs": {
     "1": {
       "title": "About"
@@ -12,7 +13,7 @@ const pagesData = {
       "title": "My Skills"
     },
     "3": {
-      "title": "Work"
+      "title": "Portfolio"
     },
     "4": {
       "title": "Contact"
