@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     animation: fade 1s ease-in-out;
 }
 
@@ -33,9 +33,8 @@
     display: flex;
     font-size: 2.5em;
     color: var(--text-color-1);
-    align-self: left;
-    margin-left: 360px;
-    max-width: 700px;
+    align-self: center;
+    text-align: center;
 }
 .AboutPage p{
     font-size: 14px;
@@ -160,6 +159,160 @@
     margin-right: auto;
 }
 
+.skillPage{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    animation: fade 1s ease-in-out;
+    padding: 5%;
+    color: var(--text-color);
+    
+}
+.skillBar{
+    width: 400px;
+    height: 4px;
+    display: flex;
+    border: 1px solid var(--primary-color);
+    margin: 8px 0px;
+    border-radius: 4px;
+}
+
+
+.skillThumb{
+    width: 90%;
+    border-radius: 8px;
+    animation: barAnimation 3s ease-in-out; 
+}
+
+.statsCard{
+    width: calc(100% - 60px);
+    backdrop-filter: blur(4px);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.statsCard h1{
+    text-align: center;
+    font-size: 32px;
+}
+
+.toolGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.toolGrid img{
+    width: 120px;
+    height: 120px;
+    padding: 1px;
+    border-radius: 8px;    
+}
+
+.toolGrid img:hover{
+    padding: 0px;
+    border: 1px solid var(--primary-color);
+    filter: drop-shadow(0px 0px 10px var(--primary-color));
+}
+
+
+.portofolioGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 70%;
+    height: 55vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.portofolioGrid::-webkit-scrollbar{
+    width: 6px;
+
+}
+
+.portofolioGrid::-webkit-scrollbar-thumb{
+    background-color: var(--text-color-1);
+    border-radius: 4px;
+}
+
+.portofolioGrid::-webkit-scrollbar-thumb:hover{
+    background-color: var(--primary-color);
+}
+
+.portofolioGrid .gridItem{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--text-color);
+    padding: 10px;
+}
+
+.portofolioGrid .gridItem img{
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    border: 2px solid #ffffff;
+    padding: 10px 18px;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .actionContainer{
+    background-color: #000;
+    display: flex;
+    align-self: center;
+    position: fixed;
+    z-index: 2;
+    right: 14%;
+    border-radius: 8px;
+  }
+  .actionContainer img{
+    padding: 10px;
+    border: 1px solid #fff;
+  }
+
 @keyframes bounce {
 
     0% {
@@ -196,5 +349,14 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes barAnimation{
+    0%{
+        width: 0px;
+    }
+    50%{
+        width: 100%;
     }
 }

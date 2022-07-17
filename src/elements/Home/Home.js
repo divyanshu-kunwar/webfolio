@@ -14,12 +14,12 @@ export default function Home(){
 
     const [tabNo , setTabNo] = useState(1);
     const [currentPage , setCurrentPage] = useState(1);
-    const [max , setMax] = useState(3);
+    const [max , setMax] = useState(4);
     let navigate = useNavigate()
     
     useEffect(() => {
-        console.log(Object.keys(pagesData.tabs).length-1)
-        setMax(Object.keys(pagesData.tabs).length-1)
+        console.log(Object.keys(pagesData.tabs).length)
+        setMax(Object.keys(pagesData.tabs).length)
     } , [])
 
     return <div className={styles.bodyStyle}>
@@ -35,14 +35,9 @@ export default function Home(){
                 return <span key={key} className={styles.navLinks} 
                 style={tabNo == key? {color:'var(--primary-color)'} : {color:'var(--text-color-1)'}} 
                 onClick = {() => {
-                    if(key > 4){
-                        window.alert("This page is not yet available")
-                    }else{
-                        setCurrentPage(key)
-                        setTabNo(key)
+                        setCurrentPage(parseInt(key))
+                        setTabNo(parseInt(key))
                         navigate(`/home/feature${key}`)
-
-                    }
                 }
                 }>
                     {pagesData.tabs[key].title}
@@ -69,6 +64,7 @@ export default function Home(){
         <img className={styles.LeftSwap} src={swapButton} alt="leftSwapBtn" 
             onClick={
                 ()=>{
+                    setTabNo(currentPage-1)
                         setCurrentPage(currentPage-1)
                         navigate(`/home/feature${currentPage-1}`)
                         console.log(currentPage);
@@ -80,6 +76,7 @@ export default function Home(){
         <img className={styles.RightSwap} src={swapButton} alt="rightSwapBtn"
         onClick={
             ()=>{
+                setTabNo(currentPage+1)
                     navigate(`/home/feature${currentPage+1}`)
                     setCurrentPage(currentPage+1)
             }
@@ -118,8 +115,3 @@ export default function Home(){
 </div>
 
 }
-
-
-/*
-                
-*/
