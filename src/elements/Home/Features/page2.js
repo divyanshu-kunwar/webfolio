@@ -62,7 +62,7 @@ const tools = {
         </div>
 
         <div className={style.statsCard}>
-        <h1>Tools and Technology I use</h1>
+        <h1>Tools and Technology I 😍</h1>
         <div className={style.toolGrid}>
         {Object.keys(tools).map(key => {
             return <div className={style.tool}>
