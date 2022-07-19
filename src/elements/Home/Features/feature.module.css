@@ -21,8 +21,6 @@
 .AboutPage{
     width: 100%;
     height: 100%;
-    /* background: url('../../../image/profile_pic.png') no-repeat -20px; */
-    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +29,7 @@
 }
 .AboutPage h1{
     display: flex;
-    font-size: 2.5em;
+    font-size: 32px;
     color: var(--text-color-1);
     align-self: center;
     text-align: center;
@@ -403,6 +401,13 @@ input[type=text], select, textarea {
     border: 1px solid #fff;
   }
 
+  
+  .resumePage h1{
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+}
+
 @keyframes bounce {
 
     0% {
@@ -449,4 +454,69 @@ input[type=text], select, textarea {
     50%{
         width: 100%;
     }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .gridParent{
+        width: 60%;
+    }
+    .AboutPage h1{
+        font-size: 24px;
+        flex-wrap: wrap;
+    }
+
+    .grid2{
+        grid-template-columns: 1fr;
+    }
+    
+    .waivyText{
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 10px;
+    }
+    
+    .portofolioGrid{
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    .skillPage{
+        width: 90%;
+        height: 55vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        grid-template-columns: 1fr;
+    }
+    .skillBar{
+        width: 220px;
+    }
+    .toolGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lottie{
+        display: none;
+    }
+    .statsCard{
+        z-index: 0;
+    }
+
+    .gridParent big{
+        font-size: 24px;
+    }
+
+    .gridParent p{
+        font-size: 18px;
+    }
+
+    .resumePage .gridParent{
+        overflow-y: scroll;
+        overflow-x: auto !important;
+    }
+
+    .resumePage h1{
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
 }

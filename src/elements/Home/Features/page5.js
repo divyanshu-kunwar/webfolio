@@ -14,7 +14,7 @@ import Download from '../../../image/download.svg'
 
  export default function FeaturePage5(){
     const [scale , setScale] = useState(80);
-        return <div className={style.AboutPage}>
+        return <div className={style.resumePage}>
         <h1>
         <div className={style.myselftext}>Mine</div>{" "}
         <div className={style.waivyText}>Resume</div>
@@ -25,13 +25,25 @@ import Download from '../../../image/download.svg'
         <div className={style.actionContainer}>
             <img src={zoomIn} alt="zoomIn" onClick={
                 () => {
-                    scale < 110 ? setScale(scale + 10) : setScale(110);
+                    if(window.matchMedia("only screen and (max-width: 760px)").matches){
+                        scale < 240 ? setScale(scale + 10) : setScale(240);
+                    }
+                    else{
+                        scale < 120 ? setScale(scale + 10) : setScale(120);
+                    }
+
+
                 }
             }/>
             <img src={zoomOut} alt="zoomOut"
             onClick={
                 () => {
-                    scale > 50 ? setScale(scale - 10) : setScale(50);
+                    if(window.matchMedia("only screen and (max-width: 760px)").matches){
+                        scale > 80 ? setScale(scale - 10) : setScale(80);
+                    }
+                    else{
+                        scale > 50 ? setScale(scale - 10) : setScale(50);
+                    }
                 }
             }
             />
@@ -41,9 +53,8 @@ import Download from '../../../image/download.svg'
                 }
             }/>
         </div>
-
-            <img src={cv1} alt='1' style={{width:`${scale}%` , alignSelf:'center'}}/>
-            <img src={cv2} alt='2' style={{width:`${scale}%` , alignSelf:'center'}}/>
+            <img src={cv1} alt='1' style={{width:`${scale}%`}}/>
+            <img src={cv2} alt='2' style={{width:`${scale}%`}}/>
         </div>
 
      </div>

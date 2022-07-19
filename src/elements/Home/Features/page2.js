@@ -32,7 +32,7 @@ const tools = {
 
  export default function FeaturePage2(){
      return <div>
-        <Player src="https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json"
+        <Player className={style.lottie} src="https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json"
         background="transparent"
         speed="1"
         style={{ 

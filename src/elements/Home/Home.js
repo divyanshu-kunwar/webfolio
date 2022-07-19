@@ -6,6 +6,7 @@ import {Outlet , useNavigate } from 'react-router-dom'
 
 import styles from './home.module.css'
 import swapButton from '../../image/rightSwap.svg'
+import menuIcon from '../../image/menu.svg'
 
 
 import pagesData from '../../Data/pages'
@@ -26,10 +27,31 @@ export default function Home(){
 
     {/*---------------------------------------- Navigation Bar --------------------------------*/}
     <div className={styles.navBarStyle}>
-        <div><span style={{color:'var(--primary-color)',fontFamily:'cursive' , fontWeight:'bold'}}>
+        <div id="navTop" className={styles.navTop} >
+        <img id="menuClick" className={styles.menuIcon} src={menuIcon} alt="menu"  
+        onClick={() => {
+            if(document.getElementById("menu").style.display == "none"){
+            document.getElementById("menu").style.display = "flex";
+
+            document.getElementById("menu").style.opacity = "1";
+            document.getElementById("menu").style.transition = "opacity 0.5s ease-in-out";
+            }else{
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("menu").style.opacity = "0";
+            document.getElementById("menu").style.transition = "opacity 0.5s ease-in-out";
+            }
+        }}
+        />
+        <span style={{color:'var(--primary-color)',fontFamily:'cursive' , fontWeight:'bold' , cursor:'pointer'}} onClick={
+            () => {
+                navigate('/')
+            }
+        }>
             {pagesData.name}
-        </span></div>
-        <div className={styles.navLinksParent}>
+
+        </span>
+        </div>
+        <div id="menu" className={styles.navLinksParent}>
 
             {Object.keys(pagesData.tabs).map((key) => {
                 return <span key={key} className={styles.navLinks} 
@@ -38,6 +60,11 @@ export default function Home(){
                         setCurrentPage(parseInt(key))
                         setTabNo(parseInt(key))
                         navigate(`/home/feature${key}`)
+                        if(window.matchMedia("only screen and (max-width: 600px)").matches){
+                            document.getElementById("menu").style.display = "none";
+                            document.getElementById("menu").style.opacity = "0";
+                            document.getElementById("menu").style.transition = "opacity 0.5s ease-in-out";
+                        }
                 }
                 }>
                     {pagesData.tabs[key].title}
@@ -108,8 +135,8 @@ export default function Home(){
             })
             }
         </div>
-        <span>No Copyright@</span>
-        <span>{pagesData.credit}</span>
+        <span id="copyright" className={styles.copyright}>No Copyright@</span>
+        <span className={styles.copyright}>{pagesData.credit}</span>
     </div>
 
 </div>

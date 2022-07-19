@@ -142,3 +142,45 @@
     opacity: 1;
     transition: 0.2s ease-in-out;
 }
+
+.menuIcon{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .navBarStyle{
+        width: 96%;
+        padding: 2%;
+        flex-direction: column;
+    }
+    .navLinksParent{
+        display: flex;
+        width: fit-content;
+        padding: 10px;
+        margin-left: 10%;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        background-color: var(--background-color);
+        z-index: 10;
+        display: none;
+    }
+    .copyright{
+        display: none;
+    }
+    .navTop{
+        width: 94%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menuIcon{
+        display: flex;
+        width: 24px;
+    }
+    .navLinks{
+        margin: 4px;
+    }
+}
