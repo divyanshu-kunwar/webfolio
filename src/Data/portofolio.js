@@ -1,7 +1,10 @@
+import financeImg from '../image/portofolio/1.jpg'
+import shopezyImg from '../image/portofolio/2.png'
+import shopezy2Img from '../image/portofolio/3.png'
 
 const data = {
     1:{
-        img : "https://1stwebdesigner.com/wp-content/uploads/2017/09/04-paul-lapkin-portfolio.jpg",
+        img : shopezyImg,
         title : "Shopezy App",
         type : "Desktop Application",
         tag : ['JavaScript' , 'P5JS' , 'SQLite' , 'ElectronJS'],
@@ -12,24 +15,24 @@ const data = {
 
     },
     2:{
-        img : "https://1stwebdesigner.com/wp-content/uploads/2017/09/04-paul-lapkin-portfolio.jpg",
-        title : "Shopezy App",
-        type : "Desktop Application",
-        tag : ['JavaScript' , 'SVG' , 'ElectronJS'],
-        desc : "ShopEzy is an invoice and bussiness solution for small bussiness including groceries , fashion stores and almost every shops and stores that need modern analytics , stock management and invoice solution . All the calculation stuffs from GST to sale price and profits are calculated automatically.",
-        link : "https://github.com/kUNWAR-DIVYANSHU/HackWIE-STEALTH",
-        video : "https://youtu.be/fAkNa3Nmp0Q",
-        code : "https://github.com/kUNWAR-DIVYANSHU/HackWIE-STEALTH",
+        img : financeImg,
+        title : "Statistics / Finanance Indicators",
+        type : "Library / Tools",
+        tag : ['Python', 'Pandas', 'Numpy'],
+        desc : "Statistic Indicator is a collection of 50+ stock analysis indicators that are being continiousally updated and added.",
+        link : "https://github.com/KUNWAR-DIVYANSHU/StatisticIndicators",
+        video : "https://github.com/KUNWAR-DIVYANSHU/StatisticIndicators",
+        code : "https://github.com/KUNWAR-DIVYANSHU/StatisticIndicators",
     },
     3:{
-        img : "https://1stwebdesigner.com/wp-content/uploads/2017/09/04-paul-lapkin-portfolio.jpg",
-        title : "Shopezy App",
-        type : "Desktop Application",
-        tag : ['SQLite' , 'ElectronJS'],
+        img : shopezy2Img,
+        title : "Shopezy Android App",
+        type : "Mobile Application",
+        tag : ['Java' , 'Android'],
         desc : "ShopEzy is an invoice and bussiness solution for small bussiness including groceries , fashion stores and almost every shops and stores that need modern analytics , stock management and invoice solution . All the calculation stuffs from GST to sale price and profits are calculated automatically.",
-        link : "https://github.com/kUNWAR-DIVYANSHU/HackWIE-STEALTH",
+        link : "https://github.com/KUNWAR-DIVYANSHU/ShopEzy_App",
         video : "https://youtu.be/fAkNa3Nmp0Q",
-        code : "https://github.com/kUNWAR-DIVYANSHU/HackWIE-STEALTH",
+        code : "https://github.com/KUNWAR-DIVYANSHU/ShopEzy_App",
     }
 }
 

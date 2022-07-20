@@ -33,9 +33,21 @@
                     </div>
                     <span className={style.projectDesc}>{data[key].desc}</span>
                     <div className={style.linkContainer}>
-                        <img src={web} alt="visit"/>
-                        <img src={youtube} alt="Watch"/>
-                        <img src={github} alt="Code"/>
+                        <img src={web} alt="visit" onClick={
+                            ()=>{
+                                window.open(data[key].link)
+                            }
+                        }/>
+                        <img src={youtube} alt="Watch" onClick={
+                            ()=>{
+                                window.open(data[key].video)
+                            }
+                        }/>
+                        <img src={github} alt="Code" onClick={
+                            ()=>{
+                                window.open(data[key].code)
+                            }
+                        }/>
                     </div>
                 </div>
             })
