@@ -29,7 +29,7 @@ import Download from '../../../image/download.svg'
                         scale < 240 ? setScale(scale + 10) : setScale(240);
                     }
                     else{
-                        scale < 120 ? setScale(scale + 10) : setScale(120);
+                        scale < 110 ? setScale(scale + 10) : setScale(110);
                     }
 
 
