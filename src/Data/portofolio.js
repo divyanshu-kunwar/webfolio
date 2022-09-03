@@ -1,6 +1,7 @@
 import financeImg from '../image/portofolio/1.jpg'
 import shopezyImg from '../image/portofolio/2.png'
 import shopezy2Img from '../image/portofolio/3.png'
+import openRes from '../image/portofolio/3.png'
 
 const data = {
     1:{
@@ -25,6 +26,16 @@ const data = {
         code : "https://github.com/KUNWAR-DIVYANSHU/StatisticIndicators",
     },
     3:{
+        img : openRes,
+        title : "Open Resource Material",
+        type : "Web Application",
+        tag : ['NextJs' , 'ReactJs' , 'CSS' , 'Firebase'],
+        desc : "Open Reference Material is an open Platform to download previous years resources , notes , videos and question papers ",
+        link : "https://github.com/KUNWAR-DIVYANSHU/reference_material",
+        video : "https://github.com/KUNWAR-DIVYANSHU/reference_material",
+        code : "https://github.com/KUNWAR-DIVYANSHU/reference_material",
+    },
+    4:{
         img : shopezy2Img,
         title : "Shopezy Android App",
         type : "Mobile Application",
