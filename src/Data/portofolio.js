@@ -31,8 +31,8 @@ const data = {
         type : "Web Application",
         tag : ['NextJs' , 'ReactJs' , 'CSS' , 'Firebase'],
         desc : "Open Reference Material is an open Platform to download previous years resources , notes , videos and question papers ",
-        link : "https://github.com/KUNWAR-DIVYANSHU/reference_material",
-        video : "https://github.com/KUNWAR-DIVYANSHU/reference_material",
+        link : "https://reference-material.vercel.app/",
+        video : "https://reference-material.vercel.app/",
         code : "https://github.com/KUNWAR-DIVYANSHU/reference_material",
     },
     4:{
