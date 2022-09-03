@@ -1,7 +1,7 @@
 import financeImg from '../image/portofolio/1.jpg'
 import shopezyImg from '../image/portofolio/2.png'
 import shopezy2Img from '../image/portofolio/3.png'
-import openRes from '../image/portofolio/3.png'
+import openRes from '../image/portofolio/open.png'
 
 const data = {
     1:{
