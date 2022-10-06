@@ -8,7 +8,6 @@ import './style/main.css';
 
 
 import Home from './elements/Home/Home';
-import Docs from './elements/Docs/Docs';
 import FeaturePage1 from './elements/Home/Features/page1';
 import FeaturePage2 from './elements/Home/Features/page2';
 import FeaturePage3 from './elements/Home/Features/page3';
@@ -34,8 +33,6 @@ root.render(
         <Route path="/home/feature5" element={<FeaturePage5/>} />
         <Route path="" element={<FeaturePage1/>} />
       </Route>
-      
-      <Route path="/docs" element={<Docs/>} />
 
       </Routes>
     </BrowserRouter>
