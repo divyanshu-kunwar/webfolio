@@ -35,7 +35,7 @@ export default function FeaturePage1() {
           </p>
         </div>
 
-        <div>{pagesData.page1section3}</div>
+        <div>{pagesData.page1section2}</div>
 
         <div>
           <span className={style.descriptionLabels}>
