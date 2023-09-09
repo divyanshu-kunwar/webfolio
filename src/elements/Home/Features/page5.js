@@ -16,7 +16,7 @@ import Download from '../../../image/download.svg'
     const [scale , setScale] = useState(80);
         return <div className={style.resumePage}>
         <h1>
-        <div className={style.myselftext}>Mine</div>{" "}
+        <div className={style.myselftext}>My</div>{" "}
         <div className={style.waivyText}>Resume</div>
       </h1>
         <div className={style.gridParent}>
