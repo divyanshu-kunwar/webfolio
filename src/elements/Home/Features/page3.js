@@ -15,7 +15,7 @@
      return <div className={style.AboutPage}>
         <h1>
         <div className={style.myselftext}>Project</div>{" "}
-        <div className={style.waivyText}>Portofolio</div>
+        <div className={style.waivyText}>Portfolio</div>
       </h1>
         <div className={style.portofolioGrid}>
 
